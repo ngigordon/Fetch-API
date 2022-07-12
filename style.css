@@ -1,0 +1,43 @@
+fieldset {
+    width: 50%;
+    margin-left:20%;
+}
+#text {
+    width: 80%;
+    margin-left: 5%;
+   
+}
+#submit {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius:2px;
+    width: 10%;
+    font-size:15px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    border: 1px solid green;
+    margin-left:20%;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    padding: 1%;
+    
+}
+
+button{
+    background-color: red;
+    color: white;
+    border: 0;
+}
+
+h1{
+    margin-left: 35%;
+}
