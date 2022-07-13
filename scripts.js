@@ -12,9 +12,8 @@ function generateTodo(todo) {
 
 const render=()=>{
     ul.textContent='';
-    todos.forEach(todo=>{
-     ul.innerHTML += generateTodo(todo)
-    })
+    todos.forEach(todo=>ul.innerHTML += generateTodo(todo)
+    )
 }
 
 const addtoDo=e=>{
@@ -27,5 +26,17 @@ const addtoDo=e=>{
    }
 
 addBtn.addEventListener('click',addtoDo);
+//delete Todo
+const deletMe = (id)=>{
+    todos = todos.filter(data => data.id !==id)
+    render();
+    }
 
+ul.addEventListener('click',e=>{
+        e.preventDefault();
+        if(e.target.getAttribute('data-id') && e.target.classList.contains('close')){
+         var id = Number(e.target.getAttribute('data-id'))
+         deletMe(id); 
+     }
+    })
     
