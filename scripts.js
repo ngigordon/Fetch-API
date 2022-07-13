@@ -17,12 +17,25 @@ const render=()=>{
 }
 
 const addtoDo=e=>{
-       e.preventDefault();
-       const datum = { id :madeId(),text:input.value, } 
-       todos.push(datum);
-       input.focus(); 
-       render()
-       input.value='';  
+    //    e.preventDefault();
+    //     
+    //    todos.push(datum);
+    //    input.focus(); 
+    //    render()
+    //    input.value='';  
+    e.preventDefault();
+    if(input.value!==''){
+        const datum = { id :madeId(),text:input.value, }
+        todos.unshift(datum);
+        input.focus(); 
+        render()
+        input.value='';  
+    }else{
+        error.textContent = 'Please enter a a todo'
+        setTimeout(() => {
+            error.textContent='';
+        }, 2500);
+    }
    }
 
 addBtn.addEventListener('click',addtoDo);
