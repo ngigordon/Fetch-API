@@ -7,22 +7,16 @@ const data = {id:'',text:''}
 const madeId= ()=> new Date().getTime()
 
 function generateTodo(todo) {
-    return ` <li><span>${todo.text}</span><button class="close" data-id ="${todo.id}"  class="delete">x</button></li>`
+    return ` <li><span>${todo.text}</span><button class="close" data-id ="${todo.id}" >x</button></li>`
 }
 
 const render=()=>{
     ul.textContent='';
-    todos.forEach(todo=>ul.innerHTML += generateTodo(todo)
+    todos.forEach(todo=>ul.innerHTML = generateTodo(todo)
     )
 }
 
-const addtoDo=e=>{
-    //    e.preventDefault();
-    //     
-    //    todos.push(datum);
-    //    input.focus(); 
-    //    render()
-    //    input.value='';  
+const addtoDo=e=>{ 
     e.preventDefault();
     if(input.value!==''){
         const datum = { id :madeId(),text:input.value, }
@@ -31,7 +25,7 @@ const addtoDo=e=>{
         render()
         input.value='';  
     }else{
-        error.textContent = 'Please enter a a todo'
+        error.textContent = 'Please enter a valid task'
         setTimeout(() => {
             error.textContent='';
         }, 2500);
