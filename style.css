@@ -41,3 +41,8 @@ button{
 h1{
     margin-left: 35%;
 }
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
