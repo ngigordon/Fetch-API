@@ -46,4 +46,13 @@ ul.addEventListener('click',e=>{
          deletMe(id); 
      }
     })
+
+
+
+    // Implementing the fetch api
+
+    fetch("https://randomuser.me/api/")
+    .then(res =>  res.json())
+    .then(data =>  console.log(data))
+    .catch(err => console.log(err))
     
