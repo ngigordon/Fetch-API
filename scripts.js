@@ -61,13 +61,13 @@ ul.addEventListener('click',e=>{
     fetch("https://randomuser.me/api/?results=10")
     .then(res => res.json())
     .then(data => {
-        let picture = (data.results[0].picture)
+        let picture = (data.results[0])
         updateUI(picture)
     } )
     .catch(err => console.log(err))
     // updating the UI with the result from the fetch API
     const updateUI = (data)=>{
-        let div =`Your profile image is : <img src="${data.large}">`
+        let div =`Your profile image is : <img src="${data.picture.large}">`
         user.innerHTML = div
     }
     
