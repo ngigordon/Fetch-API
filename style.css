@@ -1,9 +1,11 @@
 fieldset {
-    width: 100%;
+    width: 80%;
 }
 #text {
     /* width: 80%; */
-    margin-left: 5%;
+    /* margin-left: 5%; */
+    padding: 0.75rem;
+    font-size: 1.5rem;
    
 }
 #submit {
@@ -47,4 +49,10 @@ h1{
 main{
     display: flex;
     justify-content:space-evenly;
+}
+aside{
+    width: 30%;
+}
+section{
+    width: 65%;
 }
